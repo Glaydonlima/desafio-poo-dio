@@ -22,7 +22,29 @@ public class Curso extends Conteudo {
         return cargaHoraria;
     }
 
+    @Override
+    public void setTitulo(String titulo) {
+        if (titulo == null || titulo.trim().isEmpty()) {
+            System.err.println("Erro: Título inválido!");
+            return;
+        }
+        super.setTitulo(titulo);
+    }
+
+    @Override
+    public void setDescricao(String descricao) {
+        if (descricao == null || descricao.trim().isEmpty()) {
+            System.err.println("Erro: Descrição inválida!");
+            return;
+        }
+        super.setDescricao(descricao);
+    }
+
     public void setCargaHoraria(int cargaHoraria) {
+        if (cargaHoraria <= 0) {
+            System.err.println("Erro: Carga horária deve ser positiva!");
+            return;
+        }
         this.cargaHoraria = cargaHoraria;
     }
 
