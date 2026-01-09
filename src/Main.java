@@ -12,9 +12,7 @@ public class Main {
 
         Mentoria mentoria = new Mentoria("mentoria de java", "descrição mentoria java", LocalDate.now());
 
-        Bootcamp bootcamp = new Bootcamp();
-        bootcamp.setNome("Bootcamp Java Developer");
-        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+        Bootcamp bootcamp = new Bootcamp("Bootcamp Java Advanced", "Descrição Bootcamp Java Advanced", 60);
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
